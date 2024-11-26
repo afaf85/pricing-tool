@@ -1,50 +1,138 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    color: #333;
+    background: #f9f9f9;
 }
 
-/* Header */
-header {
-    background: #4CAF50;
+h1, h2, h3 {
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #4CAF50, #2F9E44);
     color: white;
     text-align: center;
-    padding: 1em 0;
+    padding: 3em 1em;
 }
 
-/* Navigation */
-nav ul {
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.nav-links {
     list-style: none;
-    padding: 0;
+    display: flex;
+    gap: 1.5em;
+}
+
+.nav-links li a {
+    color: white;
+    font-weight: 600;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+.cta-button {
+    background: white;
+    color: #2F9E44;
+    padding: 0.8em 1.5em;
+    border-radius: 25px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #e8e8e8;
+}
+
+/* Section Styles */
+.section {
+    padding: 3em 1em;
+    text-align: center;
+}
+
+.feature-cards {
     display: flex;
     justify-content: center;
-    background: #333;
-    margin: 0;
+    gap: 1.5em;
+    flex-wrap: wrap;
 }
 
-nav ul li {
-    margin: 0 1em;
+.card {
+    background: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
-/* Main Content */
-main {
+.contact-form input, .contact-form textarea {
     padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
 }
 
-section {
-    margin: 2em 0;
+.contact-form button {
+    background: #4CAF50;
+    color: white;
+    padding: 1em;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
 }
 
+/* Footer */
 footer {
     background: #333;
     color: white;
     text-align: center;
     padding: 1em 0;
+}
+
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+
+    .feature-cards {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1em;
+    }
 }

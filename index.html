@@ -5,42 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Tool</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Pricing Tool</h1>
-        <p>Optimize your pricing strategy with smart automation.</p>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">Pricing<span>Tool</span></div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Revolutionize Your Pricing Strategy</h1>
+            <p>Automate and optimize your e-commerce pricing to boost revenue and stay ahead of competitors.</p>
+            <a href="#features" class="cta-button">Learn More</a>
+        </div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
     <main>
-        <section id="features">
+        <section id="features" class="section">
             <h2>Features</h2>
-            <p>Track competitors, get recommendations, and maximize profits.</p>
+            <div class="feature-cards">
+                <div class="card">
+                    <h3>Competitor Tracking</h3>
+                    <p>Monitor competitor pricing to stay competitive.</p>
+                </div>
+                <div class="card">
+                    <h3>Smart Recommendations</h3>
+                    <p>Receive AI-driven pricing suggestions.</p>
+                </div>
+                <div class="card">
+                    <h3>Real-Time Updates</h3>
+                    <p>Adapt quickly with real-time price adjustments.</p>
+                </div>
+            </div>
         </section>
-        <section id="about">
+        <section id="about" class="section">
             <h2>About Us</h2>
-            <p>We help e-commerce businesses unlock the power of dynamic pricing.</p>
+            <p>Pricing Tool empowers e-commerce businesses with smart, automated pricing strategies tailored to their market and goals.</p>
         </section>
-        <section id="contact">
+        <section id="contact" class="section">
             <h2>Contact</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <button type="submit">Submit</button>
+            <form class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="cta-button">Send</button>
             </form>
         </section>
     </main>
     <footer>
         <p>&copy; 2025 Pricing Tool. All rights reserved.</p>
     </footer>
-    <script src="scripts/main.js"></script>
 </body>
 </html>
