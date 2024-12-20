@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_mail import Mail, Message
 import os
 from dotenv import load_dotenv
@@ -18,6 +18,12 @@ app.config['MAIL_DEFAULT_SENDER'] = os.getenv("EMAIL_USER")
 
 mail = Mail(app)
 
+# Home Route
+@app.route('/')
+def home():
+    return render_template('index.html')  # Render index.html for the homepage
+
+# Email Route
 @app.route('/send-email', methods=['POST'])
 def send_email():
     data = request.json
